@@ -84,25 +84,7 @@ enviroscreen$join_time <- enviroscreen$screen_year
 setkey(enviroscreen, Census_Tract, join_time)
 setkey(tract_year_combos, Census_Tract,join_time)
 
-tract_year_combos <- enviroscreen[tract_year_combos, roll = -Inf]
-
-# 
-# dim(envir_data)  #80350
-# # drop variables that are all missing 
-# envir_data <- envir_data[ , colSums(is.na(envir_data)) < nrow(envir_data)]  # Remove rows with NA only
-# dim(envir_data)  
-# miss_envir_data <- data.frame (colSums(is.na(envir_data)))
-# 
-# #change the format of census tract, used for data matching
-# envir_data$"Census Tract" <- paste0("0", envir_data$"Census Tract")
-# 
-# # generate the unique id: year * tract ID
-# for (idx in 1:nrow(envir_data)){
-#     envir_data$id[idx] <- paste(as.character(envir_data$tract_year[idx]), envir_data$"Census Tract"[idx])
-# }  
-# 
-# 
-# dim(envir_data)  # 80350    66    
+tract_year_combos <- enviroscreen[tract_year_combos, roll = -Inf]  
 
 saveRDS(tract_year_combos,"new_dataset/envir_data_copy.rds")
 
