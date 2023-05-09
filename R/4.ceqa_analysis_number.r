@@ -15,12 +15,10 @@ rownames(n_tract2) <-NULL
 
 ######################### SECTION 1.   The distribution of project numbers #########################
 table(n_tract2$tract_data_year)
-# 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 
-# 8057 8057 8057 8057 8057 8057 8057 8057 8057 8057 
+
 
 table(n_tract2$n)
-#     0     1     2     3     4     5     6     7     8     9 
-# 74990  4607   731   164    49    19     4     3     2     1 
+
 
 
 ######################### SECTION 2.   Independent Variables #########################
