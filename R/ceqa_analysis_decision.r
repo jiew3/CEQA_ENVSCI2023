@@ -81,44 +81,6 @@ htmlreg(list(type_tract_m1, type_tract_m2),
         caption.above = TRUE)
 
 
-#appendix Table C.1: using four key environmental variables
-
-type_tract_m3 <- multinom(Type ~ N_issues 
-                          + ln_pop_den + white_ratio + pop_char_Score  
-                          + PM  , 
-                          data = subd_scale)
-
-
-
-type_tract_m4 <- multinom(Type ~ N_issues 
-                          + ln_pop_den + white_ratio + pop_char_Score  
-                          + Cleanup_Sites, 
-                          data = subd_scale)
-
-
-
-type_tract_m5 <- multinom(Type ~ N_issues 
-                          + ln_pop_den + white_ratio + pop_char_Score 
-                          + Haz_Waste , 
-                          data = subd_scale)
-
-
-
-type_tract_m6 <- multinom(Type ~ N_issues 
-                          + ln_pop_den + white_ratio + pop_char_Score 
-                          + Imp_Water_Bodies, 
-                          data = subd_scale)
-
-
-htmlreg(list(type_tract_m3, type_tract_m4, type_tract_m5, type_tract_m6),
-        file = "result/tableA3.html",
-        single.row = FALSE,
-        stars = c(0.01, 0.05, 0.1),
-        digits = 3,
-        caption = "Determinants of CEQA Decisions (APPENDIX)",
-        include.nobs = TRUE,
-        caption.above = TRUE)
-
 
 
 
